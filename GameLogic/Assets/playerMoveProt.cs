@@ -8,10 +8,12 @@ public class playerMoveProt : MonoBehaviour
     public int playerJumpPower = 1250;
     private bool facingRight = false;
     private float moveX;
+    
 
     void Start()    
     {
         facingRight = false;
+        
     }
     // Update is called once per frame
     void Update()

@@ -15,10 +15,10 @@ this is the method used:\
 \pard\pardeftab720\sl360\partightenfactor0
 
 \f1 \cf2 \cb3 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec2  player_score \cf4 \strokec4 =\cf2 \strokec2  player_score \cf4 \strokec4 +\cf2 \strokec2  ((\cf4 \strokec4 int\cf2 \strokec2 )timeLeft \cf4 \strokec4 *\cf2 \strokec2  \cf5 \strokec5 10\cf2 \strokec2 );\cb1 \
+ player_score \cf4 =\cf2  player_score \cf4 +\cf2  ((\cf4 int\cf2 )timeLeft \cf4 *\cf2  \cf5 10\cf2 );\cb1 \
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\f0 \cf0 \kerning1\expnd0\expndtw0 \
 \
 Instructions on Extracting:\
 Download Art.  https://opengameart.org/content/heart-pixel-art\
@@ -26,4 +26,10 @@ Select Art that needs to be extracted piece by piece \
 - Change the Sprite Mode to Multiple\
 - Pixels per Unit: 100\
 - Click Sprite Editor\
-- Slice in Sprite Editor>Apply(Arrow Drop-down)>Apply}
+- Slice in Sprite Editor>Apply(Arrow Drop-down)>Apply\
+\
+Enemy ignore raycast while on default layer:\
+Edit > Project Settings > Physics2D > Uncheck \'93Queries hit triggers\'94\
+\
+Avoid rotation of character:\
+RigidBody2D on player, then selected avoid rotation on \'93Z\'94 Axis.}

@@ -31,7 +31,18 @@ public class playerScore : MonoBehaviour
         
     }
     void OnTriggerEnter2D (Collider2D trig) {
-        CountScore();
+        //Never use gameobject.name in a final project
+        //If the name changes there can be unforseen consequencess
+        //Trig refers to the trigger and the .name notation refers to the nam of the object that will trigger
+        if (trig.gameObject.name == "EndLevel") {
+            CountScore();
+        }
+        if (trig.gameObject.name == "Coin") {
+            player_score += 10;
+        //Removes gameObject from scene when triggered
+            Destroy (trig.gameObject);
+        }
+        
     }
     void CountScore() {
         player_score = player_score + ((int)timeLeft * 10);

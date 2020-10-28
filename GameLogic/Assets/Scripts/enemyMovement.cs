@@ -24,6 +24,7 @@ public class enemyMovement : MonoBehaviour
         }
         //WILL NOT WORK IF PLAYER IS ON IGNORE RAYCAST LAYER
         }
+
     }
     void Flip() {
         if (XMoveDirection > 0) {

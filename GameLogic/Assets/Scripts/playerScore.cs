@@ -14,7 +14,8 @@ public class playerScore : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       //for testing 
+       DataPref.dataManagement.LoadData();
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class playerScore : MonoBehaviour
         //Trig refers to the trigger and the .name notation refers to the nam of the object that will trigger
         if (trig.gameObject.name == "EndLevel") {
             CountScore();
+            DataPref.dataManagement.SaveData ();
         }
         if (trig.gameObject.name == "Coin") {
             player_score += 10;
@@ -44,8 +46,10 @@ public class playerScore : MonoBehaviour
         }
         
     }
-    void CountScore() {
+    void CountScore() {        
         player_score = player_score + ((int)timeLeft * 10);
-        Debug.Log(player_score);
+        DataPref.dataManagement.highScore = player_score + (int)(timeLeft * 10);
+        DataPref.dataManagement.SaveData();
+        Debug.Log("After save. Current Highscore " + DataPref.dataManagement.highScore);
     }
 }

@@ -65,12 +65,12 @@ public class playerMoveProt : MonoBehaviour
         //Allows the ray to trigger a jump for the player when its above enemy
      RaycastHit2D rayUp = Physics2D.Raycast (transform.position, Vector2.up);
      //TODO: FIX CODE
-     if (rayUp != null && rayUp.collider != null && rayUp.distance < 2f && rayUp.collider.name == "Breakable") {
+     if (rayUp != null && rayUp.collider != null && rayUp.distance < 1.111f && rayUp.collider.name == "Breakable") {
          Destroy (rayUp.collider.gameObject);
      }
      RaycastHit2D rayDown = Physics2D.Raycast (transform.position, Vector2.down);
         //"rayDown != null && rayDown.collider != null" makes sure we do not recieve error when the target below = null
-        if (rayDown != null && rayDown.collider != null && rayDown.distance < 2f && rayDown.collider.tag == "enemy") {
+        if (rayDown != null && rayDown.collider != null && rayDown.distance < 1.111f && rayDown.collider.tag == "enemy") {
             Debug.Log("Enemy contact");
             GetComponent<Rigidbody2D>().AddForce (Vector2.up * 800);
             rayDown.collider.gameObject.GetComponent<Rigidbody2D>().AddForce (Vector2.right * 200);
@@ -80,7 +80,7 @@ public class playerMoveProt : MonoBehaviour
             rayDown.collider.gameObject.GetComponent<enemyMovement>().enabled = false;
             
         }
-        if (rayDown != null && rayDown.collider != null && rayDown.distance < 2f && rayDown.collider.tag != "enemy") {                
+        if (rayDown != null && rayDown.collider != null && rayDown.distance < 1.111f && rayDown.collider.tag != "enemy") {                
                 isGrounded = true;
             }
     } 

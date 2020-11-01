@@ -581,8 +581,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 1411258256}
-  projectilePrefab: {fileID: 722224855946720574, guid: 8352a2275b58b48ef9f5fe8aa7aab119,
-    type: 3}
+  damage: 30
+  lineRenderer: {fileID: 0}
 --- !u!1 &1411258255
 GameObject:
   m_ObjectHideFlags: 0
